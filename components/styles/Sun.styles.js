@@ -5,7 +5,7 @@ const buffer = 10; // 'px'
 const rayDistance = radius * 2 + buffer; // 'px'
 const halfBuffer = buffer / 2; // 'px'
 const rayDistanceAngle = radius * 2 + halfBuffer; // 'px'
-const timeMultiplier = 0.6; // 's'
+const timeMultiplier = -0.6; // 's'
 const colorBrand = '#ff8200';
 
 // Keyframes

@@ -1,5 +1,7 @@
 # Modal Animation
 
+Toggle the modal's open state in the Knobs panel.
+
 ## Relevant CSS
 
 ```css

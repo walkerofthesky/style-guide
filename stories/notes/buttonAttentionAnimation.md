@@ -1,5 +1,7 @@
 # Button Attention Animation
 
+Toggle the attention class in the Knobs panel.
+
 ## When To Use
 
 This is good to use when trying to capture the user's attention that something about the button changed.

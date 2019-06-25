@@ -120,7 +120,7 @@
   top: -5px;
   transform: rotate(45deg);
   transform-origin: right;
-  animation-delay: 1.2s;
+  animation-delay: -1.2s;
 }
 .sun-loader__rays--2 {
   border-top: none;
@@ -128,40 +128,40 @@
   right: 0;
   bottom: 70px;
   animation-name: grow-vertical;
-  animation-delay: 1.8s;
+  animation-delay: -1.8s;
 }
 .sun-loader__rays--3 {
   left: 65px;
   top: -5px;
   transform: rotate(-45deg);
   transform-origin: left;
-  animation-delay: 2.4s;
+  animation-delay: -2.4s;
 }
 .sun-loader__rays--4 {
   top: 30px;
   left: 70px;
-  animation-delay: 3s;
+  animation-delay: -3s;
 }
 .sun-loader__rays--5 {
   top: 35px;
   left: 65px;
   transform: rotate(45deg);
   transform-origin: left;
-  animation-delay: 3.6s;
+  animation-delay: -3.6s;
 }
 .sun-loader__rays--6 {
   top: 70px;
   border-bottom: none;
   border-right: 4px solid #ff8200;
   animation-name: grow-vertical;
-  animation-delay: 4.2s;
+  animation-delay: -4.2s;
 }
 .sun-loader__rays--7 {
   bottom: -5px;
   right: 65px;
   transform: rotate(-45deg);
   transform-origin: right;
-  animation-delay: 4.8s;
+  animation-delay: -4.8s;
 }
 
 ```
@@ -174,7 +174,7 @@ $buffer: 10px;
 $ray-distance: $radius * 2 + $buffer;
 $half-buffer: $buffer / 2;
 $ray-distance-angle: $radius * 2 + $half-buffer;
-$time-multiplier: 0.6s;
+$time-multiplier: -0.6s;
 $color-gray--translucent: rgba(25, 25, 25, 0.25);
 $color-brand: #ff8200;
 
