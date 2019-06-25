@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledAccordion = styled.div`
@@ -12,8 +12,17 @@ const AccordionFold = styled.div`
   h2 {
     background: ${props => (props.expanded ? 'transparent' : '#eee')};
     border-bottom: ${props => (props.expanded ? '0' : '1px solid #ccc')};
+    cursor: pointer;
     margin: 0;
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    ::after {
+      content: '❯';
+      transform: ${props => (props.expanded ? 'rotate(90deg)' : 'rotate(0)')};
+      transition: transform 300ms cubic-bezier(0.42, 0, 0.034, 1.1);
+    }
   }
 
   p {
@@ -36,12 +45,23 @@ const AccordionFold = styled.div`
   }
 `;
 
-const Accordion = ({ expandedFold, folds }) => {
+const Accordion = ({ folds }) => {
+  const [expandedFoldId, setExpandedFold] = useState(folds[0].id);
+  function handleTitleClick(id) {
+    setExpandedFold(expandedFoldId === id ? null : id);
+  }
+
   return (
     <StyledAccordion>
       {folds.map(fold => (
-        <AccordionFold expanded={expandedFold === fold.id} key={fold.id}>
-          <h2>{fold.title}</h2>
+        <AccordionFold expanded={expandedFoldId === fold.id} key={fold.id}>
+          <h2
+            onClick={() => {
+              handleTitleClick(fold.id);
+            }}
+          >
+            {fold.title}
+          </h2>
           <div className="content">
             <p>{fold.text}</p>
           </div>

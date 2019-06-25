@@ -1,5 +1,7 @@
 # Hamburger Icon
 
+Click on the icon to see it transform to an "x".
+
 ## Example Implementation
 
 ### HTML

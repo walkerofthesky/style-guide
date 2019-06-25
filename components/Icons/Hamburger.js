@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -33,13 +33,20 @@ const BottomBun = styled.span`
   transition: all 0.25s ease-in-out;
 `;
 
-const Hamburger = ({ open }) => (
-  <StyledHamburger>
-    <TopBun open={open} />
-    <Patty open={open} />
-    <BottomBun open={open} />
-  </StyledHamburger>
-);
+const Hamburger = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <StyledHamburger
+      onClick={() => {
+        setOpen(!open);
+      }}
+    >
+      <TopBun open={open} />
+      <Patty open={open} />
+      <BottomBun open={open} />
+    </StyledHamburger>
+  );
+};
 
 Hamburger.propTypes = {
   open: PropTypes.bool

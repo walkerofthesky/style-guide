@@ -1,18 +1,11 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 
 import Accordion from '../components/Accordion';
 import animationNote from './notes/accordionAnimation.md';
 
-const options = {
-  "Emperor's Royal Guards": 'royalGuards',
-  Tionne: 'tionne',
-  'Biggs Darklighter': 'biggs',
-  'Mara Jade': 'maraJade',
-  none: null
-};
 const folds = [
   {
     id: 'royalGuards',
@@ -41,16 +34,6 @@ const folds = [
 ];
 
 const stories = storiesOf('Accordion', module);
-stories.addDecorator(withKnobs);
-stories.add(
-  'basic',
-  () => (
-    <Accordion
-      expandedFold={select('Open tab', options, 'royalGuards', 'group-id1')}
-      folds={folds}
-    />
-  ),
-  {
-    notes: { markdown: animationNote }
-  }
-);
+stories.add('basic', () => <Accordion folds={folds} />, {
+  notes: { markdown: animationNote }
+});
