@@ -67,9 +67,9 @@ function updateCoords({ iconRect, tooltipRect, offset, setCoords, position }) {
 
 let iconRect;
 let tooltipRect;
-const Tooltip = ({ icon, position, children }) => {
+const Tooltip = ({ icon, position, children, ...props }) => {
   const [coords, setCoords] = useState({ x: 'unset', y: 'unset' });
-  const [active, setActive] = useState(true); // default to true only for demo purposes
+  const [active, setActive] = useState(props.active);
   const [windowSize, setWindowSize] = useState({});
   const offset = 8;
 
@@ -105,7 +105,7 @@ const Tooltip = ({ icon, position, children }) => {
   }, []);
 
   return (
-    <StyledTooltip coords={coords} offset={offset} ref={iconRef}>
+    <StyledTooltip coords={coords} offset={offset} ref={iconRef} {...props}>
       <span
         className={`icon${active ? ' active' : ''}`}
         onClick={() => setActive(!active)}

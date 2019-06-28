@@ -48,6 +48,7 @@ stories.add(
   () => (
     <Wrapper>
       <Tooltip
+        active
         position={select(
           'Tooltip location (relative to icon)',
           options,
@@ -67,6 +68,7 @@ stories.add(
 stories.add('complex', () => (
   <Wrapper>
     <Tooltip
+      active
       position={select(
         'Tooltip location (relative to icon)',
         options,

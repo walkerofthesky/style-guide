@@ -49,7 +49,6 @@ export const StyledTooltip = styled.span`
     &.active + .tooltip,
     &:hover + .tooltip {
       opacity: 1;
-      transform: scale(1);
     }
   }
 
@@ -66,7 +65,6 @@ export const StyledTooltip = styled.span`
     position: absolute;
     top: ${props => props.coords.y};
     transition: all 250ms cubic-bezier(0.42, 0, 0.175, 1);
-    transform: scale(0);
 
     &::before {
       border-left: var(--arrow-border) solid transparent;
