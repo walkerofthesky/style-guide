@@ -1,6 +1,6 @@
 # style-guide
 
-My goal for this project is to act as a living style guide for Vivint Solar projects. In it's initial state, it's just an animations style guide, since we don't really have shared styles across projects. However, I left the name ambiguous so that it could grow into this role if desired.
+My goal for this project is to act as a living style guide for my projects. In it's initial state, it's just an animations style guide, since I don't really have shared styles across projects. However, I left the name ambiguous so that it could grow into this role if desired.
 
 ## Developer's Guide
 
@@ -18,7 +18,7 @@ npm run local
 
 I created this project using Storybook to display individual components. If you're not familiar with Storybook, check out their [Introduction](https://storybook.js.org/docs/basics/introduction/) article.
 
-Storybook is now great for reacting to changes to state. For this reason, I may switch to a static site generator like [Gatsby](https://www.gatsbyjs.org/). For now, I'm working around it by using an addon called [Knobs](https://github.com/storybookjs/storybook/tree/master/addons/knobs). With Knobs, you can similute state changes by getting user input via the Knobs addon panel, using booleans, text inputs, number inputs, selects, etc.
+Storybook is not great for reacting to changes to state. For this reason, I may switch to a static site generator like [Gatsby](https://www.gatsbyjs.org/). For now, I'm working around it by using an addon called [Knobs](https://github.com/storybookjs/storybook/tree/master/addons/knobs). With Knobs, you can simulate state changes by getting user input via the Knobs addon panel, using booleans, text inputs, number inputs, selects, etc.
 
 ### Styled Components
 
@@ -27,3 +27,5 @@ Keeping this project us simple as possible, I opted to use Styled Components to 
 ### Deployment
 
 Storybook includes a simple tool for deploying to a static hosting service, like GitHub Pages or AWS S3. Configuration options can be found on the [GitHub page](https://github.com/storybookjs/storybook-deployer). Using the command `npm run deploy` will build and deploy to GitHub Pages, using the `gh-pages` branch.
+
+The demoable site is available at [https://walkerofthesky.github.io/style-guide/](https://walkerofthesky.github.io/style-guide/).
